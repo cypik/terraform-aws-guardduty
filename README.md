@@ -38,7 +38,7 @@ module "guardduty" {
 This example demonstrates how to create various AWS resources using the provided modules. Adjust the input values to suit your specific requirements.
 
 ## Examples
-For detailed examples on how to use this module, please refer to the [Examples](https://github.com/cypik/terraform-aws-guardduty/tree/master/examples) directory within this repository.
+For detailed examples on how to use this module, please refer to the [Examples](https://github.com/cypik/terraform-aws-guardduty/tree/master/example) directory within this repository.
 
 ## License
 This Terraform module is provided under the **MIT** License. Please see the [LICENSE](https://github.com/cypik/terraform-aws-guardduty/blob/master/LICENSE) file for more details.
