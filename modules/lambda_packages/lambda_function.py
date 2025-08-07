@@ -11,7 +11,7 @@ http = urllib3.PoolManager()
 
 def lambda_handler(event, context):
     webhook_url = os.environ.get('SLACK_WEBHOOK_URL')
-    
+
     if not webhook_url:
         logger.error("SLACK_WEBHOOK_URL not set")
         return {
@@ -32,7 +32,7 @@ def lambda_handler(event, context):
         )
 
         logger.info(f"Slack response: {response.status}")
-        
+
         if response.status != 200:
             return {
                 "statusCode": response.status,
