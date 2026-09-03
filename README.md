@@ -23,7 +23,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 ```hcl
 module "guardduty" {
   source      = "cypik/guardduty/aws"
-  version     = "1.0.0"
+  version     = "1.0.1"
   name        = "guardduty"
   environment = "test"
   bucket_name = "guardduty"
@@ -52,22 +52,22 @@ Replace **MIT** and **Cypik** with the appropriate license and your information.
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.12.2 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 6.4.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.15.8 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 6.58.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 6.4.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 6.58.0 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/aws | 1.0.2 |
-| <a name="module_s3_bucket"></a> [s3\_bucket](#module\_s3\_bucket) | cypik/s3/aws | 1.0.3 |
-| <a name="module_slack-alert"></a> [slack-alert](#module\_slack-alert) | cypik/slack-notification/aws | 1.0.1 |
+| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/aws | 1.0.4 |
+| <a name="module_s3_bucket"></a> [s3\_bucket](#module\_s3\_bucket) | cypik/s3/aws | 1.0.4 |
+| <a name="module_slack-alert"></a> [slack-alert](#module\_slack-alert) | cypik/slack-notification/aws | 1.0.2 |
 
 ## Resources
 

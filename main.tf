@@ -8,7 +8,7 @@ locals {
 
 module "labels" {
   source      = "cypik/labels/aws"
-  version     = "1.0.2"
+  version     = "1.0.4"
   name        = var.name
   repository  = var.repository
   environment = var.environment
@@ -18,7 +18,7 @@ module "labels" {
 
 module "s3_bucket" {
   source  = "cypik/s3/aws"
-  version = "1.0.3"
+  version = "1.0.4"
   count   = var.enabled && var.create_bucket ? 1 : 0
 
   s3_name                 = coalesce(var.bucket_name, "secure-baseline-guardduty")
@@ -198,9 +198,8 @@ resource "aws_cloudwatch_event_target" "default" {
 }
 
 module "slack-alert" {
-  source  = "cypik/slack-notification/aws"
-  version = "1.0.1"
-  #  source = "modules/lambda_packages"
+  source                            = "cypik/slack-notification/aws"
+  version                           = "1.0.2"
   count                             = var.enabled && var.slack_enabled ? 1 : 0
   name                              = format("%s-slack-notification", module.labels.id)
   filename                          = "${path.module}/modules/lambda_packages/index.zip"
